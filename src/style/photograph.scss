@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.fav_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px;
+}
+
+.fav_list > div {
+    margin: 3px;
+    //background-color: violet;
+    background-color: #D3D3D3;
+}
+
+.fav_list > div > img {
+    /*width: 100%;*/
+    /*width: auto;*/
+    //height: 150px;
+    flex-grow: 1;
+    object-fit: cover;
+    /*margin: 2px;*/
+
+    vertical-align: bottom;
+    top: 0;
+    /*width: 100%;*/
+}
+
+img[lazy=loading] {
+    /*your style here*/
+    //display: none;
+    background-color: #FFFFFF;
+}
+
+img[lazy=error] {
+    /*your style here*/
+
+}
+
+img[lazy=loaded] {
+    /*your style here*/
+    //display: initial;
+}

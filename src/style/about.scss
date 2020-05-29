@@ -1,0 +1,79 @@
+
+.el-main {
+    text-align: center;
+
+    .raw_html {
+        margin: 2rem;
+    }
+
+    .it {
+        width: 25px;
+        height: 25px;
+        margin: 0 auto;
+
+        .wink-tougue.icon {
+            color: #000;
+            position: absolute;
+            margin-left: 2px;
+            margin-top: 2px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: solid 1px currentColor;
+        }
+
+        .wink-tougue.icon:before {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            border-top: solid 1px transparent;
+            border-right: solid 1px transparent;
+            border-bottom: solid 1px currentColor;
+            border-left: solid 1px currentColor;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .wink-tougue.icon:after {
+            content: '';
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            border: solid 1px currentColor;
+        }
+
+        .wink-tougue.icon i {
+            position: absolute;
+            left: 4px;
+            top: 10px;
+            width: 8px;
+            height: 1px;
+            background-color: currentColor;
+            -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+        }
+
+        .wink-tougue.icon i:before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: 0px;
+            width: 2px;
+            height: 2px;
+            border-radius: 2px;
+            border-top: solid 1px transparent;
+            border-right: solid 1px transparent;
+            border-bottom: solid 1px currentColor;
+            border-left: solid 1px currentColor;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+}

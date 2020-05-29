@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 1px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+html {
+    font-size: 16px !important;
+    height: 100%;
+
+    body {
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+
+        #app {
+            font-family: "Courier New", 'STFangsong', 'PingFang SC', Courier, Monaco, serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-align: left;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .el-container {
+            height: 100%;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+
+            .el-header {
+                padding: 0 1.25rem;
+                background: white;
+                width: 100%;
+                height: 6rem !important;
+                top: 0;
+                z-index: 999;
+                //position: fixed;
+                flex-direction: row !important;
+
+                .header {
+                    //display: block;
+                    flex: 0 0 auto;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: row;
+                    //justify-content: space-between;
+                    align-items: center;
+
+                    .menu.icon {
+                        color: #000;
+                        position: absolute;
+                        margin-left: 2px;
+                        margin-top: 10px;
+                        width: 17px;
+                        height: 1px;
+                        background-color: currentColor;
+                    }
+
+                    .menu.icon:before {
+                        content: '';
+                        position: absolute;
+                        top: -5px;
+                        left: 0;
+                        width: 17px;
+                        height: 1px;
+                        background-color: currentColor;
+                    }
+
+                    .menu.icon:after {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+                        width: 17px;
+                        height: 1px;
+                        background-color: currentColor;
+                    }
+
+
+                    .remove.icon {
+                        color: #000;
+                        position: absolute;
+                        margin-left: 3px;
+                        margin-top: 10px;
+                    }
+
+                    .remove.icon:before {
+                        content: '';
+                        position: absolute;
+                        width: 15px;
+                        height: 1px;
+                        background-color: currentColor;
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+
+                    .remove.icon:after {
+                        content: '';
+                        position: absolute;
+                        width: 15px;
+                        height: 1px;
+                        background-color: currentColor;
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+
+                    .header_title {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        .topic {
+                            margin: 1rem 0 0 0;
+                            font-family: Savoy, Georgia, serif;
+                            font-weight: bolder !important;
+                            font-size: 1.42rem !important;
+                            cursor: pointer;
+                        }
+
+                        .introduce {
+                            font: italic 1em Georgia, serif;
+                            margin: 0.6rem 0 0 0;
+                            font-size: smaller;
+                        }
+                    }
+                }
+
+                .header_menu {
+                    overflow: auto;
+                    margin-left: -1.7rem;
+                    height: calc(100vh - 9.75rem);
+                    width: 100vw;
+                    margin-top: 1.7rem;
+                    background: #FFFFFF;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    .header_navigation_list {
+                        width: 18rem;
+                        display: block;
+                        margin: 0 auto;
+
+                        a {
+                            border: none;
+                            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                            -webkit-tap-highlight-color: transparent;
+                            outline: none;
+                            font-size: small;
+                            display: block;
+                            text-decoration: none;
+                            color: black;
+                            padding: 1rem 4rem 1rem 0;
+                            text-align: center;
+                            margin-left: 3rem;
+                        }
+                    }
+
+                    .header_social {
+                        width: 12rem;
+                        display: block;
+                        margin: 0 auto;
+                        text-align: center;
+
+                        a {
+                            margin-top: 20%;
+                            width: 1.4375rem;
+                            height: 1.4375rem;
+                            background: url('~@/assets/image/css_sprites.png') no-repeat;
+                            background-size: 4.125rem 2.75rem;
+                            display: inline-block;
+                            opacity: 0.75;
+                            padding: 0;
+                        }
+
+                        .ins {
+                            background-position: 0 0;
+                        }
+
+                        .github {
+                            background-position: -1.375rem 0;
+                        }
+
+                        .twitter {
+                            background-position: -2.6875rem 0;
+                        }
+                    }
+                }
+            }
+
+            .el-main {
+                padding: 0 !important;
+                overflow: scroll;
+
+                .el-backtop {
+                    bottom: 4rem !important;
+                    right: 1rem !important;
+                }
+            }
+
+            .el-footer {
+                //padding: 20px;
+                height: 3.75rem !important;
+                width: 100% !important;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .footer {
+                    //padding: 20px;
+                    width: 100% !important;
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                    -webkit-transform: scale(0.5);
+                    transform: scale(0.75);
+                    font-size: 10px;
+
+                    p {
+                        width: 100%;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,73 @@
+html, body {
+    overflow: hidden;
+
+    .el-container {
+        overflow: hidden;
+
+        .el-main {
+            padding: 0 !important;
+            margin: 0 0 0 0;
+            overflow: scroll;
+
+            .order {
+                text-align: right;
+            }
+
+            .timeline {
+                margin: 0 0 0 0.5rem;
+                font-weight: 300;
+
+                .el-timeline-item {
+
+                    // 重写 element-ui 样式
+                    /deep/ .el-timeline-item__timestamp {
+                        //font-weight: bold;
+                    }
+
+                    .painting_images {
+                        display: inline-block;
+
+                        /deep/ .paintings {
+                            display: inline-block;
+                            float: initial;
+                            clear: both;
+                            //width:13rem !important;
+                            //height: 13rem !important;
+                            width: 36vw !important;
+                            height: 36vw !important;
+                        }
+
+                        /deep/ .el-image {
+                            box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+                            //width:12rem !important;
+                            //height: 12rem !important;
+                            width: 35vw !important;
+                            height: 35vw !important;
+                            text-align: center;
+                            justify-content: center; //子元素水平居中
+                            align-items: center; //子元素垂直居中
+                            display: -webkit-flex;
+                            border: #82848a;
+
+                            .image-slot {
+                                text-align: center;
+                                justify-content: center; //子元素水平居中
+                                align-items: center; //子元素垂直居中
+                                display: -webkit-flex;
+                            }
+
+                            /deep/ .el-image-viewer__mask {
+
+                            }
+
+                            .el-image-viewer__canvas {
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

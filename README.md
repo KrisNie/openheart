@@ -1,6 +1,6 @@
 # openheart
 
-https://site42.openheart.icu/
+http://site42.openheart.icu/
 
 > happy
 
